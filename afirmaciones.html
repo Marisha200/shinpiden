@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afirmaciones y Conexión Superior - Rincón Zen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reutilizando el estilo del look and feel de Okuden/Index */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f3e8ff; /* Fondo Lavanda Claro */
+            color: #1e1e1e;
+        }
+        .main-gradient {
+            background-image: linear-gradient(135deg, #7c3aed, #5b21b6);
+        }
+        .content-card {
+            background-color: white;
+            color: #1e1e1e;
+        }
+        .content-card h2 {
+            color: #5b21b6; /* Color de acento en el título */
+        }
+        .content-card h3 {
+            color: #7c3aed; /* Acento secundario para subtítulos */
+        }
+        
+        /* Estilo para los pasos de las técnicas (reutilizado) */
+        .technique-steps {
+            background-color: #f5f3ff; /* Lavanda muy claro */
+            border: 1px solid #ddd6fe;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        .technique-steps ol {
+            list-style-type: decimal;
+            margin-left: 1.5rem;
+            space-y: 1rem;
+        }
+        .technique-steps li::marker {
+            color: #5b21b6; font-weight: 600; font-size: 1.1em;
+        }
+
+        /* Nuevo estilo para las "Reglas de Oro" */
+        .rule-card {
+            background-color: #f5f3ff;
+            border-bottom: 4px solid #7c3aed;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .rule-card-title {
+            color: #5b21b6;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Nuevo estilo para la lista de afirmaciones */
+        .affirmation-list li {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0.25rem;
+            border-bottom: 1px solid #f3e8ff;
+        }
+        .affirmation-list svg {
+            color: #84cc16; /* Verde lima (como en la tarjeta del index) */
+            flex-shrink: 0;
+            margin-right: 0.75rem;
+        }
+        
+        /* Nuevo estilo para Práctica Diaria */
+        .daily-practice-card {
+            background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+            border: 1px solid #ddd6fe;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+        }
+        .daily-practice-card h4 {
+            background: linear-gradient(135deg, #a855f7, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section (Idéntico al index) -->
+    <header class="main-gradient text-white text-center py-12 sm:py-16 shadow-lg">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">Reiki Nivel III: Shinpiden</h1>
+            <p class="mt-4 text-lg sm:text-xl font-light">Tu Guía a la Maestría Interior y la Iluminación</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Botón Volver -->
+        <div class="mb-8">
+            <a href="index.html" class="inline-flex items-center bg-purple-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-purple-700 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Volver al Índice
+            </a>
+        </div>
+
+        <!-- Contenido de la Página -->
+        <article class="content-card rounded-2xl shadow-xl p-8 md:p-10">
+            
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Afirmaciones y Conexión Superior</h2>
+            
+            <!-- Sección 1: ¿Qué son las Afirmaciones? -->
+            <section>
+                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-center">¿Qué son y Cómo Funcionan?</h3>
+                <div class="max-w-3xl mx-auto text-base md:text-lg text-gray-700 space-y-4 text-justify">
+                    <p>Las afirmaciones son herramientas poderosas para <strong class="text-purple-700">reprogramar tu subconsciente</strong>. Son declaraciones positivas y conscientes que expresan la intención de cómo queremos vivir.</p>
+                    
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-md my-6">
+                        <strong class="text-yellow-800">El Desafío:</strong> A lo largo de la vida, grabamos creencias limitantes en nuestro subconsciente (ej. "no soy capaz", "no merezco"). Estas "grabaciones" viejas pueden sabotear nuestros deseos conscientes.
+                    </div>
+
+                    <p>Las afirmaciones nos permiten <strong class="text-purple-700">instalar un nuevo software</strong>. Al practicarlas, alineamos nuestra mente consciente con nuestro Ser Superior, permitiendo que nuestros deseos más profundos se manifiesten. No se trata de forzar al universo, sino de <strong class="text-purple-700">transformarte a vos mismo</strong> para vibrar en sintonía con él.</p>
+                </div>
+            </section>
+            
+            <!-- Sección 2: Las 4 Reglas de Oro -->
+            <section class="border-t border-gray-200 mt-10 pt-10">
+                <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center">Las 4 Reglas de Oro de las Afirmaciones</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                    <!-- Regla 1: Presente -->
+                    <div class="rule-card">
+                        <p class="rule-card-title mb-2">1. Habla en Presente</p>
+                        <p class="text-gray-600">No digas "Voy a ser...", di "Soy..." o "Estoy siendo...". Afirmas que <strong class="text-purple-700">ya es una realidad</strong> en proceso, no un deseo lejano.</p>
+                    </div>
+                    <!-- Regla 2: Positivo -->
+                    <div class="rule-card">
+                        <p class="rule-card-title mb-2">2. Usa Lenguaje Positivo</p>
+                        <p class="text-gray-600">El subconsciente no procesa bien el "No". En lugar de "No quiero estar enfermo", di <strong class="text-purple-700">"Soy salud perfecta"</strong>.</p>
+                    </div>
+                    <!-- Regla 3: Emoción -->
+                    <div class="rule-card">
+                        <p class="rule-card-title mb-2">3. Sentí la Emoción</p>
+                        <p class="text-gray-600">Decir la frase no es suficiente. Tenés que <strong class="text-purple-700">sentir la alegría, paz o gratitud</strong> de que ya es real. La emoción es el combustible.</p>
+                    </div>
+                    <!-- Regla 4: Constancia -->
+                    <div class="rule-card">
+                        <p class="rule-card-title mb-2">4. Sé Constante</p>
+                        <p class="text-gray-600">Repetilas todos los días, especialmente al despertar y antes de dormir. Estás <strong class="text-purple-700">reescribiendo patrones</strong> de años.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección 3: Cómo Practicar -->
+            <section class="border-t border-gray-200 mt-10 pt-10">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-center">Cómo Practicar: Pasos Simples</h3>
+                
+                <div class="max-w-3xl mx-auto technique-steps">
+                    <ol>
+                        <li>
+                            <strong>Preparación (Opcional):</strong> Hacé Kenyoku (baño seco) y trazá Daikomyo para elevar tu vibración.
+                        </li>
+                        <li>
+                            <strong>Conexión:</strong> Sentate cómodamente. Colocá suavemente una o ambas manos sobre tu pecho (corazón).
+                        </li>
+                        <li>
+                            <strong>Intención:</strong> Conectá con tu Ser Superior. Imaginá cómo querés ser o sentirte en este momento.
+                        </li>
+                        <li>
+                            <strong>Afirmación:</strong> Decí tu afirmación (en voz alta o mentalmente) 3 veces o más, enfocándote en <strong class="text-purple-700">sentir la emoción</strong> de que ya es verdad.
+                        </li>
+                        <li>
+                            <strong>Gratitud:</strong> Agradecé, sintiendo que ya está hecho.
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            
+            <!-- Sección 4: Práctica Diaria de Conexión -->
+            <section class="border-t border-gray-200 mt-10 pt-10">
+                <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center">Práctica Diaria de Conexión</h3>
+                <p class="max-w-3xl mx-auto text-center text-gray-700 mb-6 -mt-4">Usa estas afirmaciones específicas para alinear tu día con la guía de tu Ser Superior.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <!-- Al Despertar -->
+                    <div class="daily-practice-card">
+                        <h4 class="text-2xl font-bold mb-3 text-center">Al Comenzar el Día</h4>
+                        <p class="text-gray-700 text-center">Después de Kenyoku y trazar Daikomyo, uní tus manos en Gassho y afirmá:</p>
+                        <p class="text-center text-purple-800 font-semibold italic mt-4 p-4 bg-white rounded-md shadow-inner">"Hoy, voy a hacer todo correctamente, guiado y sanado por mi Ser Superior. Voy a progresar y armonizar en todos los sentidos."</p>
+                    </div>
+                    <!-- Al Finalizar -->
+                    <div class="daily-practice-card">
+                        <h4 class="text-2xl font-bold mb-3 text-center">Al Finalizar el Día</h4>
+                        <p class="text-gray-700 text-center">Repetí el proceso (Kenyoku, Daikomyo, Gassho) y expresá tu gratitud:</p>
+                        <p class="text-center text-purple-800 font-semibold italic mt-4 p-4 bg-white rounded-md shadow-inner">"Agradezco de corazón por haber estado guiado y sanado por mi Ser Superior hoy. Voy a progresar y armonizar en todos los sentidos."</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección 5: Afirmaciones Sugeridas -->
+            <section class="border-t border-gray-200 mt-10 pt-10">
+                <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center">Afirmaciones Sugeridas</h3>
+
+                <ul class="affirmation-list max-w-3xl mx-auto space-y-2 text-gray-800 text-lg">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        Soy una persona alegre, fuerte, positiva y creativa.
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        Día a día, mejoro y crezco, envuelto en la luz de Reiki.
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        Soy una extensión del Gran Universo. El Universo siempre me apoya.
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        Soy un ser radiante, lleno de amor y luz.
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        Aquí y ahora, abro mi corazón y me conecto con mi sabiduría interior.
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        Invito a la luz divina que vive dentro de mí. Soy un canal puro y perfecto de la luz de Reiki.
+                    </li>
+                </ul>
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- Scroll to Top Button (reutilizado del código Okuden) -->
+    <button id="scrollTopBtn" class="hidden fixed bottom-5 right-5 bg-purple-600 text-white rounded-full p-3 shadow-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 transform hover:scale-110 transition-all duration-200">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+    
+     <!-- Footer (Idéntico al index) -->
+     <footer class="text-center py-8 px-4 mt-8">
+        <a href="https://www.rinconzen.com.ar" target="_blank" class="text-gray-500 hover:text-purple-600 transition-colors duration-200">
+            www.rinconzen.com.ar - Hecho con ❤️
+        </a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Scroll to Top Button Logic ---
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            if (!scrollTopBtn) return; // Safety check
+
+            window.onscroll = () => {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    scrollTopBtn.classList.remove('hidden');
+                } else {
+                    scrollTopBtn.classList.add('hidden');
+                }
+            };
+
+            scrollTopBtn.onclick = () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+        });
+    </script>
+</body>
+</html>
