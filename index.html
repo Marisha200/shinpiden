@@ -3,113 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual Interactivo Reiki III - Shinpiden</title>
+    <title>Reiki Nivel III: Shinpiden - Rincón Zen</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Reutilizando el estilo del look and feel de Okuden */
+        html {
+            scroll-behavior: smooth;
+        }
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f3e8ff; /* Fondo Lavanda Claro */
+            color: #1e1e1e; /* Color de texto oscuro para contraste */
         }
-        .card-hover-effect {
+        /* Color de acento para Shinpiden: un morado más profundo que Okuden */
+        .main-gradient {
+            background-image: linear-gradient(135deg, #7c3aed, #5b21b6); /* Púrpura más oscuro y violeta */
+        }
+        /* Clase base de tarjeta reutilizada */
+        .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: white; /* El texto dentro de las tarjetas de color debe ser blanco */
         }
-        .card-hover-effect:hover {
+        /* Efecto Hover */
+        .card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            filter: brightness(1.1); /* Ligero brillo al pasar el mouse */
+        }
+        .welcome-section {
+            background-color: white;
+            color: #1e1e1e;
+        }
+        .welcome-section h2 {
+            color: #5b21b6; /* Color de acento en el título */
+        }
+        .icon-svg {
+             stroke: currentColor;
+             fill: none;
+             stroke-width: 2;
+             stroke-linecap: round;
+             stroke-linejoin: round;
+        }
+
+        /* Estilos específicos para las tarjetas de Shinpiden */
+        .card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .card p {
+            font-weight: 300;
+        }
+        /* Clases de color para las 8 secciones */
+        .card-1 { background-color: #a855f7; } /* Violeta Principal */
+        .card-2 { background-color: #6366f1; } /* Índigo */
+        .card-3 { background-color: #10b981; } /* Esmeralda */
+        .card-4 { background-color: #f59e0b; } /* Ámbar */
+        .card-5 { background-color: #ef4444; } /* Rojo */
+        .card-6 { background-color: #06b6d4; } /* Cian */
+        .card-7 { background-color: #db2777; } /* Rosa (Dojo) */
+        .card-8 { background-color: #84cc16; } /* Lima (Recursos) */
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
-
-    <!-- Encabezado Principal en formato de banda -->
-    <header class="bg-indigo-600 text-white py-12 sm:py-16 text-center shadow-lg">
+<body class="text-gray-800">
+    <!-- Header Section -->
+    <header class="main-gradient text-white text-center py-12 sm:py-16 shadow-lg">
         <div class="container mx-auto px-4">
-            <h1 class="text-4xl md:text-5xl font-bold">Reiki Nivel III: Shinpiden</h1>
-            <p class="text-lg md:text-xl mt-2 opacity-90">Tu Guía Visual e Interactiva</p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">Reiki Nivel III: Shinpiden</h1>
+            <p class="mt-4 text-lg sm:text-xl font-light">Tu Guía a la Maestría Interior y la Iluminación</p>
         </div>
     </header>
 
-    <!-- Contenido Principal -->
-    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
 
-        <!-- Cuadrícula de Secciones -->
-        <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Welcome Section -->
+        <section class="welcome-section rounded-2xl shadow-xl p-8 md:p-10 mb-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Shinpiden: El Despertar de tu Maestría Interior</h2>
+            <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto text-justify">
+                Este nivel, conocido como el "Maestro Interior", es una invitación a que te conviertas en un canal puro de la energía universal. Aquí explorarás herramientas y técnicas avanzadas, el "Símbolo Maestro Dai Ko Myo", y las prácticas para alcanzar la iluminación y la paz absoluta (Satori).
+            </p>
+            <p class="mt-4 text-base md:text-lg text-gray-600 max-w-3xl mx-auto italic">
+                La energía del maestro ya está dentro tuyo. Es hora de activarla.
+            </p>
+        </section>
 
-            <!-- Card 1: Introducción -->
-            <a href="bienvenida.html" class="block bg-white p-8 rounded-2xl shadow-md card-hover-effect">
-                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v11.494m-5.747-8.247l11.494 4.994-11.494 4.995 11.494-13.239-11.494 4.994z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 18.364A9 9 0 0118.364 5.636" />
+        <!-- Navigation Cards Section -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Tarjeta 1: El Maestro Interior -->
+            <a class='card card-1 p-8 rounded-2xl shadow-lg flex flex-col items-center text-center' href='maestro-interior.html'>
+                <div class="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 icon-svg" viewBox="0 0 24 24">
+                        <path d="M12 2L2 22h20L12 2zm0 16a2 2 0 100-4 2 2 0 000 4z" fill="currentColor" stroke="none"/>
+                        <path d="M12 2L2 22h20L12 2zM12 5l-8 16h16L12 5z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-slate-900 mb-2">Bienvenida a Shinpiden</h3>
-                <p class="text-slate-600">El significado del tercer nivel y el comienzo de tu viaje como maestro interior.</p>
+                <h3 class="mb-2">El Maestro Interior (Shinpiden)</h3>
+                <p class="font-light">Descubre el linaje, el rol y el propósito de este nivel de autorrealización.</p>
             </a>
 
-            <!-- Card 2: El Símbolo Maestro -->
-            <a href="daikomyo.html" class="block bg-white p-8 rounded-2xl shadow-md card-hover-effect">
-                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-amber-100 mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            <!-- Tarjeta 2: Símbolo Maestro -->
+            <a class='card card-2 p-8 rounded-2xl shadow-lg flex flex-col items-center text-center' href='daikomyo.html'>
+                <div class="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 icon-svg" viewBox="0 0 24 24">
+                        <path d="M12 17c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2s-2 .9-2 2v6c0 1.1.9 2 2 2zm6 2h-4v-2h4v2zM6 19h4v-2H6v2zM20 7h2v2h-2V7zM2 7h2v2H2V7zM12 2a10 10 0 100 20 10 10 0 000-20zM12 4a8 8 0 110 16 8 8 0 010-16z"/>
+                        <path d="M12 6a6 6 0 100 12 6 6 0 000-12zM12 8a4 4 0 100 8 4 4 0 000-8z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-slate-900 mb-2">Daikomyo: El Símbolo Maestro</h3>
-                <p class="text-slate-600">Descubre la "Gran Luz Brillante" y cómo integrar su poder en tu práctica.</p>
+                <h3 class="mb-2">Símbolo Maestro: Daikomyo (大光明)</h3>
+                <p class="font-light">La Gran Luz Brillante. Su trazado, significado esotérico y cómo activa tu ser.</p>
+            </a>
+
+            <!-- Tarjeta 3: Sanación y Espiritualidad -->
+            <a class='card card-3 p-8 rounded-2xl shadow-lg flex flex-col items-center text-center' href='espiritualidad.html'>
+                <div class="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 icon-svg" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                </div>
+                <h3 class="mb-2">Sanación, Satori y Anshin Ritsumei</h3>
+                <p class="font-light">El camino a la Iluminación, la Paz Absoluta y vivir alineado con tu misión (Ritsumei).</p>
+            </a>
+
+            <!-- Tarjeta 4: Técnicas Avanzadas -->
+            <a class='card card-4 p-8 rounded-2xl shadow-lg flex flex-col items-center text-center' href='tecnicas.html'>
+                <div class="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 icon-svg" viewBox="0 0 24 24">
+                        <path d="M3 12h18M12 3v18M6 6l12 12M6 18l12-12"/>
+                    </svg>
+                </div>
+                <h3 class="mb-2">Técnicas Avanzadas y Purificación</h3>
+                <p class="font-light">Domina el Entrenamiento Solar, Sekizui Joka Ibuki Ho y las potentes Respiraciones HADO.</p>
+            </a>
+
+            <!-- Tarjeta 5: Afirmaciones y Ser Superior -->
+            <a class='card card-5 p-8 rounded-2xl shadow-lg flex flex-col items-center text-center' href='afirmaciones.html'>
+                <div class="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 icon-svg" viewBox="0 0 24 24">
+                        <path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="mb-2">Afirmaciones y Conexión Superior</h3>
+                <p class="font-light">Herramientas para transformar el subconsciente y conectar con la guía de tu Ser Superior.</p>
+            </a>
+
+            <!-- Tarjeta 6: Superación de Símbolos y Cierre -->
+            <a class='card card-6 p-8 rounded-2xl shadow-lg flex flex-col items-center text-center' href='superacion.html'>
+                <div class="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 icon-svg" viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0017 10a6.5 6.5 0 10-13 0 6.5 6.5 0 006.47 6.47l.27.28v.79l5 5 1.49-1.49-5-5zm-6 0a4.5 4.5 0 110-9 4.5 4.5 0 010 9z"/>
+                    </svg>
+                </div>
+                <h3 class="mb-2">Superación de Símbolos</h3>
+                <p class="font-light">El camino final de la maestría: trascender los símbolos para ser uno con la energía.</p>
             </a>
             
-            <!-- Card 3: Filosofía -->
-            <a href="filosofia.html" class="block bg-white p-8 rounded-2xl shadow-md card-hover-effect">
-                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-sky-100 mb-6">
-                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            <!-- Tarjeta 7: Dojo Interactivo -->
+            <a class='card card-7 p-8 rounded-2xl shadow-lg flex flex-col items-center text-center' href='dojo.html'>
+                <div class="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 icon-svg" viewBox="0 0 24 24">
+                        <path d="M12 2l-5 5 2 2 3-3 3 3 2-2-5-5z"/>
+                        <path d="M12 22a10 10 0 100-20 10 10 0 000 20z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-slate-900 mb-2">Filosofía y Despertar</h3>
-                <p class="text-slate-600">Profundiza en conceptos como Anshin Ritsumei y el camino hacia el Satori.</p>
+                <h3 class="mb-2">Dojo Interactivo (Tests y Pruebas)</h3>
+                <p class="font-light">Pon a prueba tu conocimiento y mide tu progreso en el camino de Shinpiden.</p>
             </a>
 
-            <!-- Card 4: Técnicas Avanzadas -->
-            <a href="tecnicas.html" class="block bg-white p-8 rounded-2xl shadow-md card-hover-effect">
-                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-100 mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 3.242a5.25 5.25 0 015.25-2.242 5.25 5.25 0 015.25 2.242M10.5 3.242V21m0-17.758a5.25 5.25 0 00-5.25 2.242m5.25-2.242a5.25 5.25 0 015.25 2.242" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 12.75l-4.5-4.5m4.5 4.5l4.5-4.5m-4.5 4.5v6" />
+            <!-- Tarjeta 8: Prácticas y Recursos -->
+            <a class='card card-8 p-8 rounded-2xl shadow-lg flex flex-col items-center text-center' href='recursos.html'>
+                <div class="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 icon-svg" viewBox="0 0 24 24">
+                        <path d="M12 2a10 10 0 100 20 10 10 0 000-20zM9 16V8l7 4-7 4z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-slate-900 mb-2">Técnicas Avanzadas</h3>
-                <p class="text-slate-600">Aprende prácticas de purificación como la Respiración HADO y el Entrenamiento Solar.</p>
+                <h3 class="mb-2">Prácticas y Recursos (Audios)</h3>
+                <p class="font-light">Material de apoyo, guías de meditación (HADO), música y archivos adicionales para tu práctica.</p>
             </a>
 
-            <!-- Card 5: Prácticas Diarias -->
-            <a href="practicas.html" class="block bg-white p-8 rounded-2xl shadow-md card-hover-effect">
-                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-100 mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-slate-900 mb-2">Prácticas para el Alma</h3>
-                <p class="text-slate-600">Conecta con tu Ser Superior, utiliza afirmaciones y eleva tu consciencia día a día.</p>
-            </a>
+        </section>
+    </main>
 
-            <!-- Card 6: Linaje -->
-            <a href="linaje.html" class="block bg-white p-8 rounded-2xl shadow-md card-hover-effect">
-                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-violet-100 mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-slate-900 mb-2">Nuestro Linaje</h3>
-                <p class="text-slate-600">La cadena de maestros que transmite las enseñanzas originales de Mikao Usui.</p>
-            </a>
+    <!-- Scroll to Top Button (reutilizado del código Okuden) -->
+    <button id="scrollTopBtn" class="hidden fixed bottom-5 right-5 bg-purple-600 text-white rounded-full p-3 shadow-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 transform hover:scale-110 transition-all duration-200">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+    
+     <footer class="text-center py-8 px-4 mt-8">
+        <a href="https://www.rinconzen.com.ar" target="_blank" class="text-gray-500 hover:text-purple-600 transition-colors duration-200">
+            www.rinconzen.com.ar - Hecho con ❤️
+        </a>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Scroll to Top Button Logic ---
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            if (!scrollTopBtn) return; // Safety check
 
-        </main>
-        
-        <!-- Pie de Página -->
-        <footer class="text-center mt-12 pt-8 border-t border-slate-200">
-            <p class="text-sm text-slate-500">Manual Interactivo basado en el material de Rincón Zen - Marina Rabino.</p>
-        </footer>
-    </div>
+            window.onscroll = () => {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    scrollTopBtn.classList.remove('hidden');
+                } else {
+                    scrollTopBtn.classList.add('hidden');
+                }
+            };
 
+            scrollTopBtn.onclick = () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+        });
+    </script>
 </body>
 </html>
