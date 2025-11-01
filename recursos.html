@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos y Prácticas: Shinpiden - Rincón Zen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reutilizando el estilo del look and feel de Okuden/Index */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f3e8ff; /* Fondo Lavanda Claro */
+            color: #1e1e1e;
+        }
+        .main-gradient {
+            background-image: linear-gradient(135deg, #7c3aed, #5b21b6);
+        }
+        .content-card {
+            background-color: white;
+            color: #1e1e1e;
+        }
+        .content-card h2 {
+            color: #5b21b6; /* Color de acento en el título */
+        }
+        .content-card h3 {
+            color: #7c3aed; /* Acento secundario para subtítulos */
+        }
+        
+        /* Estilo para el reproductor de audio */
+        .audio-card {
+            background-color: #faf5ff; /* Púrpura muy claro */
+            border-left: 4px solid #7c3aed;
+        }
+        
+        /* Estilo para el reproductor de audio nativo */
+        audio::-webkit-media-controls-panel {
+            background-color: #f3e8ff;
+            color: #5b21b6;
+        }
+        audio::-webkit-media-controls-play-button,
+        audio::-webkit-media-controls-mute-button {
+            background-color: #c084fc;
+            border-radius: 50%;
+        }
+        audio::-webkit-media-controls-timeline {
+            background-color: #ddd6fe;
+            border-radius: 4px;
+        }
+        
+        /* Estilo para las tarjetas del blog */
+        .blog-card {
+            background-color: #faf5ff;
+            border: 1px solid #e9d5ff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-color: #7c3aed;
+        }
+
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section (Idéntico al index) -->
+    <header class="main-gradient text-white text-center py-12 sm:py-16 shadow-lg">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">Reiki Nivel III: Shinpiden</h1>
+            <p class="mt-4 text-lg sm:text-xl font-light">Tu Guía a la Maestría Interior y la Iluminación</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Botón Volver -->
+        <div class="mb-8">
+            <a href="index.html" class="inline-flex items-center bg-purple-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-purple-700 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Volver al Índice
+            </a>
+        </div>
+
+        <!-- Contenido de la Página -->
+        <article class="content-card rounded-2xl shadow-xl p-8 md:p-10">
+            
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Recursos y Prácticas Guiadas</h2>
+            
+            <div class="max-w-4xl mx-auto text-base md:text-lg text-gray-700 space-y-4 text-center">
+                <p>Aquí encontrarás los audios de las meditaciones y prácticas guiadas del Nivel III, además de otros materiales de apoyo para descargar y artículos recomendados del blog.</p>
+            </div>
+
+            <!-- Sección de Audios (Actualizada) -->
+            <section class="mt-12">
+                <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center">Audios de Meditación y Prácticas</h3>
+
+                <div class="space-y-8 max-w-3xl mx-auto">
+                    
+                    <!-- Audio Card 1: Autopurificación en la Luz -->
+                    <div class="audio-card p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold text-purple-800 mb-2">Autopurificación en la Luz</h4>
+                        <p class="text-gray-600 mb-4">Guía para la técnica de "Auto-Purificación en la Luz" y la limpieza de la columna vertebral (Sekizui Joka Ibuki Ho).</p>
+                        <audio controls class="w-full">
+                            <source src="Autopurificacion en la Luz.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+
+                    <!-- Audio Card 2: El Iluminado -->
+                    <div class="audio-card p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold text-purple-800 mb-2">El Iluminado</h4>
+                        <p class="text-gray-600 mb-4">Práctica para conectar con la vibración de los seres iluminados (Buda, Cristo, Ryoken) y elevar tu propia vibración.</p>
+                        <audio controls class="w-full">
+                            <source src="El Iluminado.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+
+                    <!-- Audio Card 3: Entrenamiento solar -->
+                    <div class="audio-card p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold text-purple-800 mb-2">Entrenamiento solar</h4>
+                        <p class="text-gray-600 mb-4">Práctica guiada para integrar todos los símbolos de Reiki y conectarte profundamente con la energía sanadora del Sol.</p>
+                        <audio controls class="w-full">
+                            <source src="Entrenamiento solar.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+
+                    <!-- Audio Card 4: Meditacion Hado -->
+                    <div class="audio-card p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold text-purple-800 mb-2">Meditación Hado</h4>
+                        <p class="text-gray-600 mb-4">Práctica guiada para la Respiración y Meditación HADO. Utilízala para elevar tu vibración y conectar con la energía universal.</p>
+                        <audio controls class="w-full">
+                            <source src="Meditacion Hado.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+
+                    <!-- Audio Card 5: Meditación Reiki -->
+                    <div class="audio-card p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold text-purple-800 mb-2">Meditación Reiki</h4>
+                        <p class="text-gray-600 mb-4">Meditación general para elevar la consciencia y crear un espacio protegido usando el Símbolo Maestro Daikomyo.</p>
+                        <audio controls class="w-full">
+                            <source src="Meditaciòn Reiki.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+
+                    <!-- Audio Card 6: Mi Ser Superior -->
+                    <div class="audio-card p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold text-purple-800 mb-2">Mi Ser Superior</h4>
+                        <p class="text-gray-600 mb-4">Práctica de conexión matutina y nocturna con tu Ser Superior. Ideal para comenzar y finalizar el día alineado/a.</p>
+                        <audio controls class="w-full">
+                            <source src="Mi Ser Superior.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Sección de Descargas (Actualizada) -->
+            <section class="border-t border-gray-200 mt-12 pt-10">
+                <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center">Material Adicional y Descargas</h3>
+
+                <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Descarga 1: Influencias en Reiki -->
+                    <div class="bg-green-50 border-2 border-green-200 p-6 rounded-lg shadow-md text-center">
+                        <h4 class="text-lg font-bold text-green-800 mb-3">Influencias en Reiki</h4>
+                        <p class="text-gray-600 text-sm mb-4">Descubrí cómo el Budismo, Shintoísmo y Taoísmo han influenciado la práctica del Reiki.</p>
+                        <a href="https://drive.google.com/file/d/1ofv5hI9S7fvRXsya0yDgF3k_UgF51fQd/view?usp=sharing" target="_blank" class="inline-flex items-center bg-green-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            Descargar PDF
+                        </a>
+                    </div>
+                    
+                    <!-- Descarga 2: E-book - El sendero serpentino -->
+                    <div class="bg-blue-50 border-2 border-blue-200 p-6 rounded-lg shadow-md text-center">
+                        <h4 class="text-lg font-bold text-blue-800 mb-3">E-book: El Sendero Serpentino</h4>
+                        <p class="text-gray-600 text-sm mb-4">Un viaje profundo a través de los chakras, la alquimia interna y el despertar de la conciencia.</p>
+                        <a href="https://drive.google.com/file/d/19nQVs3oyCopKjfnXQOyv_ELSLi2cH9S9/view?usp=sharing" target="_blank" class="inline-flex items-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13.5M6.253 12h13.5" />
+                            </svg>
+                            Leer E-book
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Sección de Artículos del Blog (Nueva) -->
+            <section class="border-t border-gray-200 mt-12 pt-10">
+                <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center">Artículos del Blog para Profundizar</h3>
+                
+                <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    
+                    <!-- Blog Card 1 -->
+                    <a href="https://www.rinconzen.com.ar/post/caos-maestro-necesario" target="_blank" class="blog-card block p-6 rounded-lg shadow-sm">
+                        <h4 class="text-lg font-bold text-purple-800 mb-2">Caos: El Maestro Necesario</h4>
+                        <p class="text-sm text-gray-600">Una reflexión sobre cómo los momentos de crisis son fundamentales para nuestro crecimiento espiritual.</p>
+                    </a>
+                    
+                    <!-- Blog Card 2 -->
+                    <a href="https://www.rinconzen.com.ar/post/regulaci%C3%B3n-de-reiki" target="_blank" class="blog-card block p-6 rounded-lg shadow-sm">
+                        <h4 class="text-lg font-bold text-purple-800 mb-2">Regulación de Reiki</h4>
+                        <p class="text-sm text-gray-600">Un análisis sobre la situación actual de Reiki y los debates en torno a su regulación.</p>
+                    </a>
+                    
+                    <!-- Blog Card 3 -->
+                    <a href="https://www.rinconzen.com.ar/post/las-cosas-por-su-nombre-la-autenticidad-en-reiki" target="_blank" class="blog-card block p-6 rounded-lg shadow-sm">
+                        <h4 class="text-lg font-bold text-purple-800 mb-2">La Autenticidad en Reiki</h4>
+                        <p class="text-sm text-gray-600">Explorando la importancia de la autenticidad y llamar a las cosas por su nombre en la práctica.</p>
+                    </a>
+                    
+                    <!-- Blog Card 4 -->
+                    <a href="https://www.rinconzen.com.ar/post/ra%C3%ADces-espirituales-de-jap%C3%B3n-un-viaje-por-el-shinto%C3%ADsmo-y-su-relaci%C3%B3n-con-reiki" target="_blank" class="blog-card block p-6 rounded-lg shadow-sm">
+                        <h4 class="text-lg font-bold text-purple-800 mb-2">Raíces Espirituales de Japón</h4>
+                        <p class="text-sm text-gray-600">Un viaje por el Shintoísmo y su profunda e innegable relación con la práctica de Reiki.</p>
+                    </a>
+                </div>
+            </section>
+            
+            <!-- Frase de Cierre -->
+            <section class="border-t border-gray-200 mt-12 pt-10">
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-xl md:text-2xl text-purple-800 italic font-semibold">
+                        "Gracias por tu compromiso, por tu dedicación y por permitir que la energía de Reiki te asista transformando tu vida."
+                    </p>
+                    <p class="mt-4 text-lg font-bold text-gray-700">- Marina</p>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- Scroll to Top Button (reutilizado del código Okuden) -->
+    <button id="scrollTopBtn" class="hidden fixed bottom-5 right-5 bg-purple-600 text-white rounded-full p-3 shadow-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 transform hover:scale-110 transition-all duration-200">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+    
+     <!-- Footer (Idéntico al index) -->
+     <footer class="text-center py-8 px-4 mt-8">
+        <a href="https://www.rinconzen.com.ar" target="_blank" class="text-gray-500 hover:text-purple-600 transition-colors duration-200">
+            www.rinconzen.com.ar - Hecho con ❤️
+        </a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Lógica del Botón de Scroll ---
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            if (!scrollTopBtn) return; // Safety check
+
+            window.onscroll = () => {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    scrollTopBtn.classList.remove('hidden');
+                } else {
+                    scrollTopBtn.classList.add('hidden');
+                }
+            };
+
+            scrollTopBtn.onclick = () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+        });
+    </script>
+</body>
+</html>
+
