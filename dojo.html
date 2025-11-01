@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Interactivo: Shinpiden - Rincón Zen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reutilizando el estilo del look and feel de Okuden/Index */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f3e8ff; /* Fondo Lavanda Claro */
+            color: #1e1e1e;
+        }
+        .main-gradient {
+            background-image: linear-gradient(135deg, #7c3aed, #5b21b6);
+        }
+        .content-card {
+            background-color: white;
+            color: #1e1e1e;
+        }
+        .content-card h2 {
+            color: #5b21b6; /* Color de acento en el título */
+        }
+        .content-card h3 {
+            color: #7c3aed; /* Acento secundario para subtítulos */
+        }
+
+        /* Estilos del Acordeón (Reutilizados de tecnicas.html) */
+        .accordion-toggle {
+            background-color: #faf5ff; /* Púrpura muy claro */
+            border: 1px solid #ddd6fe;
+        }
+        .accordion-toggle:hover {
+            background-color: #f3e8ff;
+        }
+        .accordion-panel {
+            border: 1px solid #ddd6fe;
+            border-top: 0;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+        
+        /* --- Estilos para Drag & Drop --- */
+        .drag-container {
+            background-color: #f3e8ff; /* Fondo lavanda */
+            border: 2px dashed #a78bfa; /* Borde púrpura */
+        }
+        .drop-container {
+            background-color: #faf5ff; /* Fondo púrpura muy claro */
+            border: 2px dashed #a78bfa;
+        }
+        .draggable {
+            cursor: grab;
+            user-select: none;
+            transition: background-color 0.2s, opacity 0.2s;
+        }
+        .draggable.dragging {
+            opacity: 0.5;
+            cursor: grabbing;
+            background-color: #ddd6fe;
+        }
+        .drop-target {
+            min-height: 4rem; /* Altura mínima para soltar */
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+        .drop-target.drag-over {
+            background-color: #e9d5ff; /* Púrpura más claro al arrastrar encima */
+            border-color: #7c3aed;
+        }
+        /* Estilos para retroalimentación de respuestas */
+        .feedback {
+            transition: opacity 0.3s;
+        }
+        .correct {
+            color: #16a34a; /* Verde */
+            font-weight: 600;
+        }
+        .incorrect {
+            color: #dc2626; /* Rojo */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section (Idéntico al index) -->
+    <header class="main-gradient text-white text-center py-12 sm:py-16 shadow-lg">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">Reiki Nivel III: Shinpiden</h1>
+            <p class="mt-4 text-lg sm:text-xl font-light">Tu Guía a la Maestría Interior y la Iluminación</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Botón Volver -->
+        <div class="mb-8">
+            <a href="index.html" class="inline-flex items-center bg-purple-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-purple-700 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Volver al Índice
+            </a>
+        </div>
+
+        <!-- Contenido de la Página -->
+        <article class="content-card rounded-2xl shadow-xl p-8 md:p-10">
+            
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Dojo Interactivo: Shinpiden</h2>
+            
+            <div class="max-w-4xl mx-auto text-base md:text-lg text-gray-700 space-y-4 text-center">
+                <p>¡Bienvenido al Dojo! Es hora de poner a prueba tu conocimiento del Nivel III. Elige un desafío para comenzar.</p>
+            </div>
+
+            <!-- Contenedor del Acordeón para los Juegos -->
+            <div class="space-y-6 max-w-4xl mx-auto mt-12">
+
+                <!-- Juego 1: Verdadero o Falso -->
+                <div>
+                    <h3 class="accordion-toggle rounded-lg shadow-md z-10 relative">
+                        <button class="accordion-button w-full flex justify-between items-center text-left text-xl font-bold p-6">
+                            <span>Juego 1: Verdadero o Falso</span>
+                            <svg class="accordion-icon h-6 w-6 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                    </h3>
+                    <div class="accordion-panel hidden -mt-2 relative z-0 p-6 rounded-b-lg shadow-md space-y-6">
+                        <form id="quiz-vf">
+                            <!-- Pregunta 1 -->
+                            <div class="quiz-question">
+                                <p class="font-semibold text-lg mb-2">1. El término "Shinpiden" significa "Nivel de Sanación a Distancia".</p>
+                                <div class="flex space-x-4">
+                                    <label class="flex items-center"><input type="radio" name="q1" value="false" class="mr-2"> Falso</label>
+                                    <label class="flex items-center"><input type="radio" name="q1" value="true" class="mr-2"> Verdadero</label>
+                                </div>
+                                <span class="feedback hidden" id="feedback-q1"></span>
+                            </div>
+                            <!-- Pregunta 2 -->
+                            <div class="quiz-question mt-4">
+                                <p class="font-semibold text-lg mb-2">2. "Daikomyo" se traduce como "Gran Luz Brillante".</p>
+                                <div class="flex space-x-4">
+                                    <label class="flex items-center"><input type="radio" name="q2" value="false" class="mr-2"> Falso</label>
+                                    <label class="flex items-center"><input type="radio" name="q2" value="true" class="mr-2"> Verdadero</label>
+                                </div>
+                                <span class="feedback hidden" id="feedback-q2"></span>
+                            </div>
+                            <!-- Pregunta 3 -->
+                            <div class="quiz-question mt-4">
+                                <p class="font-semibold text-lg mb-2">3. El Kanji "Myô" (明) se compone de los símbolos del Sol y la Estrella.</p>
+                                <div class="flex space-x-4">
+                                    <label class="flex items-center"><input type="radio" name="q3" value="false" class="mr-2"> Falso</label>
+                                    <label class="flex items-center"><input type="radio" name="q3" value="true" class="mr-2"> Verdadero</label>
+                                </div>
+                                <span class="feedback hidden" id="feedback-q3"></span>
+                            </div>
+                            <!-- Pregunta 4 -->
+                            <div class="quiz-question mt-4">
+                                <p class="font-semibold text-lg mb-2">4. "Anshin Ritsumei" es el estado de Paz Absoluta y alineación con la misión de vida.</p>
+                                <div class="flex space-x-4">
+                                    <label class="flex items-center"><input type="radio" name="q4" value="false" class="mr-2"> Falso</label>
+                                    <label class="flex items-center"><input type="radio" name="q4" value="true" class="mr-2"> Verdadero</label>
+                                </div>
+                                <span class="feedback hidden" id="feedback-q4"></span>
+                            </div>
+
+                            <button type="button" id="verificar-vf" class="mt-6 bg-purple-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-purple-700 transition-colors duration-300">Verificar Respuestas</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Juego 2: Relacionar Conceptos (Drag & Drop) -->
+                <div>
+                    <h3 class="accordion-toggle rounded-lg shadow-md z-10 relative">
+                        <button class="accordion-button w-full flex justify-between items-center text-left text-xl font-bold p-6">
+                            <span>Juego 2: Relacionar Conceptos (Arrastrar y Soltar)</span>
+                            <svg class="accordion-icon h-6 w-6 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                    </h3>
+                    <div class="accordion-panel hidden -mt-2 relative z-0 p-6 rounded-b-lg shadow-md">
+                        <p class="mb-4 text-center">Arrastra el término de la izquierda (lavanda) sobre su definición correcta a la derecha (blanco).</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="juego-conceptos">
+                            <!-- Columna de Términos (Arrastrables) -->
+                            <div class="drag-container p-4 rounded-lg space-y-4">
+                                <div id="drag-daikomyo" draggable="true" data-match="drop-daikomyo" class="draggable bg-white p-4 rounded-lg shadow font-semibold">Daikomyo (大光明)</div>
+                                <div id="drag-satori" draggable="true" data-match="drop-satori" class="draggable bg-white p-4 rounded-lg shadow font-semibold">Satori</div>
+                                <div id="drag-hado" draggable="true" data-match="drop-hado" class="draggable bg-white p-4 rounded-lg shadow font-semibold">Respiración HADO</div>
+                                <div id="drag-myo" draggable="true" data-match="drop-myo" class="draggable bg-white p-4 rounded-lg shadow font-semibold">Kanji "Myô" (明)</div>
+                            </div>
+                            
+                            <!-- Columna de Definiciones (Zonas de Soltar) -->
+                            <div class="drop-container p-4 rounded-lg space-y-4">
+                                <div id="drop-satori" data-match="drag-satori" class="drop-target p-4 rounded-lg bg-white shadow-inner">
+                                    <span class="font-bold text-purple-700">[Definición]</span> El despertar espiritual o iluminación; la Paz Absoluta.
+                                </div>
+                                <div id="drop-myo" data-match="drag-myo" class="drop-target p-4 rounded-lg bg-white shadow-inner">
+                                    <span class="font-bold text-purple-700">[Definición]</span> Compuesto por 'Sol' (Sabiduría) y 'Luna' (Compasión).
+                                </div>
+                                <div id="drop-daikomyo" data-match="drag-daikomyo" class="drop-target p-4 rounded-lg bg-white shadow-inner">
+                                    <span class="font-bold text-purple-700">[Definición]</span> El Símbolo Maestro. Significa "Gran Luz Brillante".
+                                </div>
+                                <div id="drop-hado" data-match="drag-hado" class="drop-target p-4 rounded-lg bg-white shadow-inner">
+                                    <span class="font-bold text-purple-700">[Definición]</span> Técnica que usa la exhalación "Ha..." para elevar la vibración.
+                                </div>
+                            </div>
+                        </div>
+                        <span id="feedback-conceptos" class="feedback hidden text-center mt-4"></span>
+                    </div>
+                </div>
+
+                <!-- Juego 3: Ordenar los Pasos (Drag & Drop) -->
+                <div>
+                    <h3 class="accordion-toggle rounded-lg shadow-md z-10 relative">
+                        <button class="accordion-button w-full flex justify-between items-center text-left text-xl font-bold p-6">
+                            <span>Juego 3: Ordenar la Técnica (Arrastrar y Soltar)</span>
+                            <svg class="accordion-icon h-6 w-6 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                    </h3>
+                    <div class="accordion-panel hidden -mt-2 relative z-0 p-6 rounded-b-lg shadow-md">
+                        <p class="mb-4 text-center">Arrastra los pasos del <strong>Entrenamiento Solar</strong> (abajo) y suéltalos en el orden correcto (arriba).</p>
+                        
+                        <!-- Zona de Orden (Soltar) -->
+                        <div id="pasos-ordenados" class="drop-container p-4 rounded-lg space-y-4">
+                            <div class="drop-target p-4 rounded-lg bg-white shadow-inner" data-step="1"><strong>Paso 1:</strong> (Arrastra aquí)</div>
+                            <div class="drop-target p-4 rounded-lg bg-white shadow-inner" data-step="2"><strong>Paso 2:</strong> (Arrastra aquí)</div>
+                            <div class="drop-target p-4 rounded-lg bg-white shadow-inner" data-step="3"><strong>Paso 3:</strong> (Arrastra aquí)</div>
+                            <div class="drop-target p-4 rounded-lg bg-white shadow-inner" data-step="4"><strong>Paso 4:</strong> (Arrastra aquí)</div>
+                            <div class="drop-target p-4 rounded-lg bg-white shadow-inner" data-step="5"><strong>Paso 5:</strong> (Arrastra aquí)</div>
+                            <div class="drop-target p-4 rounded-lg bg-white shadow-inner" data-step="6"><strong>Paso 6:</strong> (Arrastra aquí)</div>
+                        </div>
+
+                        <!-- Zona de Pasos (Arrastrar) -->
+                        <div id="pasos-desordenados" class="drag-container p-4 rounded-lg grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                            <div id="drag-paso-3" draggable="true" data-step="3" class="draggable bg-white p-3 rounded-lg shadow">Manos al Corazón (Contar hasta 10).</div>
+                            <div id="drag-paso-1" draggable="true" data-step="1" class="draggable bg-white p-3 rounded-lg shadow">Levantar manos, palmas se miran, fluir energía del Sol (Contar hasta 10).</div>
+                            <div id="drag-paso-5" draggable="true" data-step="5" class="draggable bg-white p-3 rounded-lg shadow">Manos al Tanden y Sacro (Contar hasta 20).</div>
+                            <div id="drag-paso-2" draggable="true" data-step="2" class="draggable bg-white p-3 rounded-lg shadow">Manos a los lados de la Cabeza (Contar hasta 10).</div>
+                            <div id="drag-paso-6" draggable="true" data-step="6" class="draggable bg-white p-3 rounded-lg shadow">Apartar manos, relajar hombros y sentir la luz interior.</div>
+                            <div id="drag-paso-4" draggable="true" data-step="4" class="draggable bg-white p-3 rounded-lg shadow">Manos al Abdomen Superior (Contar hasta 10).</div>
+                            <!-- Nota: Faltaba 1 paso en el PDF (cuello), lo he omitido para simplificar a 6 pasos clave del PDF -->
+                        </div>
+                        
+                        <button type="button" id="verificar-pasos" class="mt-6 bg-purple-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-purple-700 transition-colors duration-300">Verificar Orden</button>
+                        <span id="feedback-pasos" class="feedback hidden ml-4"></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+
+    </main>
+
+    <!-- Scroll to Top Button (reutilizado del código Okuden) -->
+    <button id="scrollTopBtn" class="hidden fixed bottom-5 right-5 bg-purple-600 text-white rounded-full p-3 shadow-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 transform hover:scale-110 transition-all duration-200">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+    
+     <!-- Footer (Idéntico al index) -->
+     <footer class="text-center py-8 px-4 mt-8">
+        <a href="https://www.rinconzen.com.ar" target="_blank" class="text-gray-500 hover:text-purple-600 transition-colors duration-200">
+            www.rinconzen.com.ar - Hecho con ❤️
+        </a>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        // --- Lógica del Acordeón ---
+        function accordionLogic() {
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // El panel es el elemento siguiente al <h3> padre del botón
+                    const panel = button.closest('h3').nextElementSibling;
+                    const icon = button.querySelector('.accordion-icon');
+                    
+                    if (panel && panel.classList.contains('accordion-panel')) {
+                        panel.classList.toggle('hidden');
+                    }
+                    if (icon) {
+                        icon.classList.toggle('rotate-180');
+                    }
+                });
+            });
+        }
+
+        // --- Lógica del Juego 1: Verdadero o Falso ---
+        function juegoVerdaderoFalso() {
+            const botonVerificar = document.getElementById('verificar-vf');
+            if (!botonVerificar) return;
+
+            const respuestasCorrectas = {
+                q1: 'false', // Shinpiden es Maestro Interior
+                q2: 'true',
+                q3: 'false', // Es Sol y Luna
+                q4: 'true'
+            };
+
+            botonVerificar.addEventListener('click', () => {
+                const form = document.getElementById('quiz-vf');
+                let todasCorrectas = true;
+
+                for (const [pregunta, respuestaCorrecta] of Object.entries(respuestasCorrectas)) {
+                    const input = form.querySelector(`input[name="${pregunta}"]:checked`);
+                    const feedback = document.getElementById(`feedback-${pregunta}`);
+                    
+                    if (input) {
+                        if (input.value === respuestaCorrecta) {
+                            feedback.textContent = '¡Correcto!';
+                            feedback.className = 'feedback correct block mt-1';
+                        } else {
+                            feedback.textContent = 'Incorrecto.';
+                            feedback.className = 'feedback incorrect block mt-1';
+                            todasCorrectas = false;
+                        }
+                    } else {
+                        feedback.textContent = 'Por favor, responde esta pregunta.';
+                        feedback.className = 'feedback incorrect block mt-1';
+                        todasCorrectas = false;
+                    }
+                }
+            });
+        }
+
+        // --- Lógica de Drag & Drop (General) ---
+        function setupDragAndDrop(containerSelector) {
+            const draggables = document.querySelectorAll(`${containerSelector} .draggable`);
+            const dropTargets = document.querySelectorAll(`${containerSelector} .drop-target`);
+            let draggedItem = null;
+
+            draggables.forEach(draggable => {
+                draggable.addEventListener('dragstart', (e) => {
+                    draggedItem = e.target;
+                    setTimeout(() => e.target.classList.add('dragging'), 0);
+                    // Para Firefox, que necesita dataTransfer
+                    e.dataTransfer.setData('text/plain', e.target.id);
+                });
+
+                draggable.addEventListener('dragend', () => {
+                    draggedItem.classList.remove('dragging');
+                    draggedItem = null;
+                });
+            });
+
+            dropTargets.forEach(target => {
+                target.addEventListener('dragover', (e) => {
+                    e.preventDefault(); // Necesario para permitir 'drop'
+                    target.classList.add('drag-over');
+                });
+
+                target.addEventListener('dragleave', () => {
+                    target.classList.remove('drag-over');
+                });
+
+                target.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    target.classList.remove('drag-over');
+                    if (draggedItem) {
+                        // Si el objetivo ya tiene un elemento (que no sea el texto placeholder)
+                        // lo devolvemos a su contenedor original
+                        const existingDraggable = target.querySelector('.draggable');
+                        if (existingDraggable) {
+                            const originalContainer = document.getElementById(containerSelector.substring(1) === 'juego-conceptos' ? 'juego-conceptos' : 'pasos-desordenados');
+                            originalContainer.appendChild(existingDraggable);
+                        }
+                        
+                        // Añadir el nuevo elemento
+                        target.appendChild(draggedItem);
+                        draggedItem = null;
+                    }
+                });
+            });
+        }
+
+        // --- Lógica del Juego 2: Relacionar Conceptos ---
+        function juegoDragDropConceptos() {
+            setupDragAndDrop('#juego-conceptos');
+            const botonVerificar = document.getElementById('verificar-conceptos');
+            if (!botonVerificar) return;
+            
+            botonVerificar.addEventListener('click', () => {
+                const dropTargets = document.querySelectorAll('#juego-conceptos .drop-target');
+                let todasCorrectas = true;
+                
+                dropTargets.forEach(target => {
+                    const draggable = target.querySelector('.draggable');
+                    if (draggable && draggable.dataset.match === target.id) {
+                        target.classList.remove('border-red-500');
+                        target.classList.add('border-green-500', 'border-2');
+                    } else {
+                        target.classList.remove('border-green-500');
+                        target.classList.add('border-red-500', 'border-2');
+                        todasCorrectas = false;
+                    }
+                });
+
+                const feedback = document.getElementById('feedback-conceptos');
+                feedback.textContent = todasCorrectas ? '¡Excelente! Todo correcto.' : 'Algunos conceptos no coinciden. ¡Inténtalo de nuevo!';
+                feedback.className = todasCorrectas ? 'feedback correct block' : 'feedback incorrect block';
+            });
+        }
+
+        // --- Lógica del Juego 3: Ordenar los Pasos ---
+        function juegoDragDropPasos() {
+            setupDragAndDrop('#pasos-ordenados, #pasos-desordenados'); // Permitir D&D en ambas zonas
+            const botonVerificar = document.getElementById('verificar-pasos');
+            if (!botonVerificar) return;
+
+            botonVerificar.addEventListener('click', () => {
+                const dropTargets = document.querySelectorAll('#pasos-ordenados .drop-target');
+                let todasCorrectas = true;
+
+                dropTargets.forEach(target => {
+                    const draggable = target.querySelector('.draggable');
+                    if (draggable && draggable.dataset.step === target.dataset.step) {
+                        target.classList.remove('border-red-500');
+                        target.classList.add('border-green-500', 'border-2');
+                    } else {
+                        target.classList.remove('border-green-500');
+                        target.classList.add('border-red-500', 'border-2');
+                        todasCorrectas = false;
+                    }
+                });
+
+                const feedback = document.getElementById('feedback-pasos');
+                feedback.textContent = todasCorrectas ? '¡Perfecto! Ese es el orden correcto.' : 'El orden no es correcto. ¡Sigue intentando!';
+                feedback.className = todasCorrectas ? 'feedback correct block' : 'feedback incorrect block';
+            });
+        }
+
+
+        // --- Lógica del Botón de Scroll ---
+        function scrollTopLogic() {
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            if (!scrollTopBtn) return;
+
+            window.onscroll = () => {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    scrollTopBtn.classList.remove('hidden');
+                } else {
+                    scrollTopBtn.classList.add('hidden');
+                }
+            };
+
+            scrollTopBtn.onclick = () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+        }
+
+        // Inicializar todas las lógicas
+        accordionLogic();
+        juegoVerdaderoFalso();
+        juegoDragDropConceptos();
+        juegoDragDropPasos();
+        scrollTopLogic();
+
+    });
+    </script>
+</body>
+</html>
+
